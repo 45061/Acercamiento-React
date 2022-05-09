@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+const Title = (props)=> <h1>Acercamiento a {props.title}</h1>
+const Subtitle = (props) => <h2>Estamos probando el componente {props.subtitul}</h2>
+const Button = (props) =>{
+  return(
+    <div>
+      <button>
+        {props.name}
+      </button>
+
+    </div>
+  )
+  
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title title="React"/>
+      <Subtitle subtitul ='Subtitle'/>
+      <Subtitle subtitul ='Title'/>
+      <Subtitle subtitul ='Button'/>
+      <Button name="Requst"/>
     </div>
   );
 }
